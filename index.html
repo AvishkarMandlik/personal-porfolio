@@ -301,19 +301,16 @@
 
     <div class="row">
 
-        <form action="" class="contact-form">
+        <form action="mailto:mandlikavi121@gmail.com">
 
             <input type="text" placeholder="name" class="box name" />
             <input type="email" placeholder="email" class="box email" />
-            <input type="number" placeholder="number" class="box">
             <textarea name="" placeholder="Your message..." class="msg"  cols="30" rows="10"></textarea>
-
             <input type="submit" class="btn" id="submit" value="send message"/>
 
         </form>
 
     </div>
-
 
 </section>
 
@@ -327,29 +324,6 @@
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 <script src="js/downloadcv.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    const form = document.querySelector('.contact-form');
-         
-function sendMsg(e){
-     e.preventDefault();
-   const name = document.querySelector('.name');
-         email = document.querySelector('.email');
-         msg = document.querySelector('.msg');
-
-            Email.send({
-            SecureToken : "98027008-bbce-4ec9-baf6-4482a4b8620d",
-            To : "mandlikavi121@gmail.com",
-            From : "email.value",
-            Subject : "Contact Form",
-            Body : msg.value
-            }).then(
-            message => alert(message)
-        );
-        }       
-
-        form.addEventListener('submit', sendMsg);
-</script>
 
 </body>
 </html>
